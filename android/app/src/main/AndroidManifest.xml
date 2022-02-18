@@ -2,7 +2,7 @@
     package="com.jayare.swole_mate">
    <application
         android:label="swole_mate"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/swolemate_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

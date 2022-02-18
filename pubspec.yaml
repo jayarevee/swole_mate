@@ -19,6 +19,7 @@ dependencies:
   audioplayers: ^0.20.1
   http: ^0.13.4
   spotify_sdk: ^2.2.0
+  wakelock: ^0.6.1+1
 
 dev_dependencies:
   flutter_test:

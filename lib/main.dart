@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:swole_mate/screens/main_screen.dart';
+import 'package:wakelock/wakelock.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Wakelock.enable();
   runApp(const MyApp());
 }
 

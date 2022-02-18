@@ -25,10 +25,10 @@ class _SpotifyWidgetState extends State<SpotifyWidget> {
   IconData isPlayingIcon = Icons.play_arrow;
   bool _connected = false;
   late Widget spotifyWidget = spotifySettings(); // widget that is displayed
+
   void togglePlaying() {
     if (isPlaying) {
       spotifyService.pause();
-      print('PAUSEEEEE');
     } else {
       spotifyService.resume();
     }
@@ -80,7 +80,9 @@ class _SpotifyWidgetState extends State<SpotifyWidget> {
               ),
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 RoundIconButton(
-                  onPress: () {},
+                  onPress: () {
+                    spotifyService.skipPrevious();
+                  },
                   icon: FontAwesomeIcons.arrowLeft,
                 ),
                 RoundIconButton(
@@ -90,7 +92,9 @@ class _SpotifyWidgetState extends State<SpotifyWidget> {
                   icon: isPlayingIcon,
                 ),
                 RoundIconButton(
-                  onPress: () {},
+                  onPress: () {
+                    spotifyService.skipNext();
+                  },
                   icon: FontAwesomeIcons.arrowRight,
                 ),
               ]),

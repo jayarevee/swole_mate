@@ -19,7 +19,6 @@ class _TimerWidgetState extends State<TimerWidget>
   late int _time;
   bool isPlaying = false;
   IconData startTimerIcon = FontAwesomeIcons.play;
-
   @override
   void initState() {
     _time = 180;
@@ -91,7 +90,7 @@ class _TimerWidgetState extends State<TimerWidget>
     if (timerText == '00:00') {
       _audioCache.play('audio/alarm.wav');
       isPlaying = false;
-      print('done!');
+      togglePlayIcon();
     }
   }
 
